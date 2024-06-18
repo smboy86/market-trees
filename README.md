@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 마켓 연리지
 
-## Getting Started
+# 기획서
 
-First, run the development server:
+## 메인 기능
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1) 관리자 (마켓 연리지)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. 미정
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2) 셀러
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. 메인화면 - 1
+   1. 마켓 슬라이더
+   2. 캘린더
+   3. 지도
+2. 마켓 상세 - 1
+3. 마켓 참가 신청 - 1
+4. 로그인 & 회원 가입 - 1
 
-## Learn More
+### 3) 주최자
 
-To learn more about Next.js, take a look at the following resources:
+1. 마켓 메인 (캘린더) - 1
+2. 마켓 등록 - (sum 3)
+   1. 진행 - 1
+      1. 모집관리 - 1
+   2. 종료 - 1
+   3. 취소 - 1
+3. 마켓 정보관리 - 1
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 전체
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 전체 화면 갯수 - 10개
