@@ -4,7 +4,6 @@ import { SocialLoginKakao } from './socialLoginKakao';
 import { Auth } from '@supabase/auth-ui-react';
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
-import { InputWithLabel } from '@/components/form/InputWithLabel';
 import { Container } from '@/components/layout/container';
 
 export default function Page() {
@@ -13,7 +12,6 @@ export default function Page() {
   return (
     <Container variant={'pcLayout'} className="border max-w-[1080px]">
       <main className="flex min-h-screen flex-col items-center justify-start">
-        {/* <InputWithLabel></InputWithLabel> */}
         <Auth
           supabaseClient={supabaseClient}
           appearance={{
@@ -29,6 +27,9 @@ export default function Page() {
             },
           }}
         />
+        {/* 커스텀 인풋 라벨 */}
+        {/* <InputWithLabel></InputWithLabel> */}
+        {/* 커스텀 소셜 로그인 */}
         {/* <SocialLoginKakao /> */}
       </main>
     </Container>
