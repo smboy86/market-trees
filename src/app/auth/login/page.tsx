@@ -8,6 +8,7 @@ import { Container } from '@/components/layout/container';
 
 export default function Page() {
   const supabaseClient = useSupabaseClient();
+  const env = process.env.NODE_ENV;
 
   return (
     <Container variant={'pcLayout'} className="border max-w-[1080px]">
@@ -19,6 +20,9 @@ export default function Page() {
             style: { container: { width: '286px' } },
           }}
           providers={['kakao']}
+          redirectTo={
+            env ? 'http://localhost:3000' : 'https://market-trees.vercel.app/'
+          }
           localization={{
             variables: {
               sign_in: {

@@ -1,14 +1,18 @@
 'use client';
 
+import CheckUserSession from '@/components/auth/checkUserSession';
 import { Container } from '@/components/layout/container';
 import { Button } from '@/components/ui/button';
+import { createClient } from '@/utils/supabase/client';
 import { useUser } from '@supabase/auth-helpers-react';
+import { supabase } from '@supabase/auth-ui-shared';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 export default function App() {
   const user = useUser();
   const router = useRouter();
+  const supabase = createClient();
 
   return (
     <Container className="border">
@@ -38,6 +42,7 @@ export default function App() {
               >
                 Hi
               </Button>
+              <Button onClick={() => supabase.auth.signOut()}>Logout</Button>
             </div>
           ) : (
             <Button onClick={() => router.push('/auth/login')}>
@@ -48,6 +53,7 @@ export default function App() {
         View - Footer
       </main>
       {/* 세션 체크 처리 */}
+      <CheckUserSession />
     </Container>
   );
 }

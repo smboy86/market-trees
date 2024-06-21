@@ -19,6 +19,8 @@ export function SocialLoginKakao({ children, pendingText, ...props }: Props) {
     url = url.startsWith('http') ? url : `https://${url}`;
     // Make sure to include a trailing `/`.
     url = url.endsWith('/') ? url : `${url}/`;
+
+    console.log('URL ::: ', url);
     return url;
   };
 
