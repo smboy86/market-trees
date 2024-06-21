@@ -17,8 +17,7 @@ export default function App() {
   return (
     <Container className="border">
       <main className="flex min-h-screen flex-col items-center justify-start">
-        View - Navigatator
-        <nav>
+        {/* <nav>
           {user ? (
             <div className="flex items-center gap-2 p-10">
               <div className="relative w-[66px] h-[66px] rounded-full border overflow-hidden">
@@ -49,8 +48,7 @@ export default function App() {
               로그인이 필요합니다.
             </Button>
           )}
-        </nav>
-        View - Footer
+        </nav> */}
       </main>
       {/* 세션 체크 처리 */}
       <CheckUserSession />
