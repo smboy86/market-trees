@@ -2,15 +2,15 @@ import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
-const containerVariants = cva('mx-auto px-4 sm:px-6 lg:px-8', {
+const containerVariants = cva('mx-auto px-8', {
   variants: {
     variant: {
-      fullMobileConstrainedPadded: 'max-w-7xl sm:px-6 lg:px-8',
-      constrainedPadded: 'max-w-7xl px-4 sm:px-6 lg:px-8',
-      fullMobileBreakpointPadded: 'container mx-auto sm:px-6 lg:px-8',
-      breakpointPadded: 'container mx-auto px-4 sm:px-6 lg:px-8',
-      narrowConstrainedPadded: 'max-w-7xl px-4 sm:px-6 lg:px-8 max-w-3xl',
-      pcLayout: 'min-w-7xl px-4',
+      pcLayout: 'min-w-7xl px-4 py-4 max-w-[1080px] mt-2 mb-6',
+      // fullMobileConstrainedPadded: 'max-w-7xl sm:px-6 lg:px-8',
+      // constrainedPadded: 'max-w-7xl px-4 sm:px-6 lg:px-8',
+      // fullMobileBreakpointPadded: 'container mx-auto sm:px-6 lg:px-8',
+      // breakpointPadded: 'container mx-auto px-4 sm:px-6 lg:px-8',
+      // narrowConstrainedPadded: 'max-w-7xl px-4 sm:px-6 lg:px-8 max-w-3xl',
     },
   },
   defaultVariants: {
@@ -36,13 +36,12 @@ const Container: React.FC<ContainerProps> = ({
 
   return (
     <Comp className={containerClasses} {...props}>
-      {variant === 'narrowConstrainedPadded' ? (
+      {/* {variant === 'narrowConstrainedPadded' ? (
         <div className="mx-auto max-w-3xl">{children}</div>
-      ) : variant === 'pcLayout' ? (
-        <div className="mx-auto max-w-[1080px] min-w-[1080px]">{children}</div>
       ) : (
         children
-      )}
+      )} */}
+      {children}
     </Comp>
   );
 };

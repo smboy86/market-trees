@@ -11,7 +11,7 @@ export default function Page() {
   const env = process.env.NODE_ENV;
 
   return (
-    <Container variant={'pcLayout'} className="border max-w-[1080px]">
+    <Container variant={'pcLayout'}>
       <main className="flex min-h-screen flex-col items-center justify-start">
         <Auth
           supabaseClient={supabaseClient}
@@ -21,7 +21,7 @@ export default function Page() {
           }}
           providers={['kakao']}
           redirectTo={
-            env ? 'http://localhost:3000' : 'https://market-trees.vercel.app/'
+            env ? 'http://localhost:3000/' : 'https://market-trees.vercel.app/'
           }
           localization={{
             variables: {

@@ -1,5 +1,7 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
+import { createClient } from '@/utils/supabase/client';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -9,6 +11,17 @@ interface NavlinksProps {
 
 export default function Navlinks({ user }: NavlinksProps) {
   const router = useRouter();
+  const supabase = createClient();
+
+  const handleLogOut = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      console.log('로그아웃 에러 발생');
+      return;
+    }
+
+    router.replace('/');
+  };
 
   return (
     <div className="relative flex flex-row justify-between py-4 align-center md:py-6">
@@ -34,26 +47,26 @@ export default function Navlinks({ user }: NavlinksProps) {
           >
             창업
           </Link>
-          {/* {user && (
-            <Link
-              href="/account"
-              className="inline-flex items-center leading-6 font-medium transition ease-in-out duration-75 cursor-pointer text--slate-950 rounded-md p-1"
-            >
-              Account
-            </Link>
-          )} */}
         </nav>
       </div>
       <div className="flex justify-end space-x-8">
         {user ? (
-          <div>마이페이지</div>
+          <>
+            <Button
+              variant={'ghost'}
+              onClick={() => {
+                router.push('/mypage');
+              }}
+            >
+              마이페이지
+            </Button>
+            <form onSubmit={handleLogOut}>
+              <Button variant={'ghost'} onClick={handleLogOut}>
+                로그아웃
+              </Button>
+            </form>
+          </>
         ) : (
-          //   <form onSubmit={(e) => handnavleRequest(e, SignOut, router)}>
-          //     <input type="hidden" name="pathName" value={usePathname()} />
-          //     <button type="submit" className={s.link}>
-          //       Sign out
-          //     </button>
-          //   </form>
           <Link
             href="/auth/login"
             className="inline-flex items-center leading-6 font-medium transition ease-in-out duration-75 cursor-pointer text--slate-950 rounded-md p-1"
