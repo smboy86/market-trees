@@ -53,6 +53,7 @@ export default function CheckUserSession() {
     return () => {
       channel.data.subscription.unsubscribe();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [supabase]);
 
   return null;
