@@ -21,7 +21,8 @@ export default function Page() {
           }}
           providers={['kakao']}
           redirectTo={
-            env ? 'http://localhost:3000/' : 'https://market-trees.vercel.app/'
+            // env ? 'http://localhost:3000/' : 'https://market-trees.vercel.app/'
+            'https://market-trees.vercel.app/'
           }
           localization={{
             variables: {
