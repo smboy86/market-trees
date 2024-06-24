@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/layout/container';
 import Wrap from '@/components/layout/wrap';
+import KakaoMap from '@/components/map/kakaoMap';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -44,7 +45,9 @@ export default function App() {
         </div>
 
         <div className="w-full border text-center mb-10">2) 캘린더 영역</div>
-        <div className="w-full border text-center">3) 지도 영역</div>
+        <div className="w-full border text-center">
+          <KakaoMap markerPositions={[]} size={[100, 580]} />
+        </div>
       </Wrap>
     </Container>
   );
