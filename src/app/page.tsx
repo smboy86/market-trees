@@ -1,5 +1,6 @@
 'use client';
 
+import Calendar from '@/components/calrendar/calendar';
 import { Container } from '@/components/layout/container';
 import Wrap from '@/components/layout/wrap';
 import KakaoMap from '@/components/map/kakaoMap';
@@ -44,7 +45,9 @@ export default function App() {
           </Carousel>
         </div>
 
-        <div className="w-full border text-center mb-10">2) 캘린더 영역</div>
+        <div className="w-full border text-center mb-10">
+          <Calendar />
+        </div>
         <div className="w-full border text-center">
           <KakaoMap markerPositions={[]} size={[100, 580]} />
         </div>
