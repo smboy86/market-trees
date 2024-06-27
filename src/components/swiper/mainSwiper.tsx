@@ -26,6 +26,10 @@ export default function MainSwiper() {
                   </span>
                 </CardContent>
               </Card>
+              <p className="pt-1.5 text-overflow">
+                마켓 이름 {index + 1} <br /> 최대 2줄 -- 최대 2줄 -- 최대 2줄 --
+                최대 2줄 -- 최대 2줄 -- 최대 2줄 --
+              </p>
             </div>
           </CarouselItem>
         ))}
