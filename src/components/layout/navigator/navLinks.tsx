@@ -67,6 +67,12 @@ export default function Navlinks({ user }: NavlinksProps) {
           >
             창업
           </Link>
+          <Link
+            href="/org"
+            className="inline-flex items-center leading-6 font-medium transition ease-in-out duration-75 cursor-pointer text--slate-950 rounded-md p-1 text-slate-500"
+          >
+            (임시) 주최자 메인
+          </Link>
         </nav>
       </div>
       <div className="flex justify-end space-x-8">
