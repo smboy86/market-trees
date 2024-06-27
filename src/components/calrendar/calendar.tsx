@@ -7,6 +7,16 @@ import { Fragment, useEffect, useState } from 'react';
 // import { Dialog, Transition } from '@headlessui/react'
 // import { CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/20/solid'
 import { EventSourceInput } from '@fullcalendar/core/index.js';
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '../ui/select';
+import { Button } from '../ui/button';
 
 interface Event {
   title: string;
@@ -37,6 +47,50 @@ export default function Calendar() {
 
   return (
     <div className="">
+      <div className="flex justify-between py-1">
+        <div className="left flex gap-2">
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="지역 전체" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>지역을 선택하세요.</SelectLabel>
+                <SelectItem value="r1">경기 북부</SelectItem>
+                <SelectItem value="r2">경기 남부</SelectItem>
+                <SelectItem value="r3">서울 강북</SelectItem>
+                <SelectItem value="r4">서울 강남</SelectItem>
+                <SelectItem value="r5">전라남도</SelectItem>
+                <SelectItem value="etc">...</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="마켓 유형" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>마켓 유형을 선택하세요.</SelectLabel>
+                <SelectItem value="m1">아파트</SelectItem>
+                <SelectItem value="m2">주상복합 아파트</SelectItem>
+                <SelectItem value="m3">복합 쇼핑몰</SelectItem>
+                <SelectItem value="m4">백화점</SelectItem>
+                <SelectItem value="m5">축제</SelectItem>
+                <SelectItem value="etc">...</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="right flex gap-2">
+          <Button onClick={() => alert('마켓 리뷰 등록 화면으로 이동')}>
+            마켓 리뷰 등록
+          </Button>
+          <Button onClick={() => alert('(주최자)마켓 일정 등록 화면으로 이동')}>
+            마켓 일정 등록
+          </Button>
+        </div>
+      </div>
       <FullCalendar
         locale={'ko'}
         plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}

@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="ko" suppressHydrationWarning>
       <body className={inter.className}>
         {/* 네비게이션 서버 컴포넌트 */}
-        <Navbar />
+        {/* <Navbar /> */}
         <AuthProvider>
           {children}
           {/* 세션 체크 처리 */}
