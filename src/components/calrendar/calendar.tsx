@@ -102,8 +102,8 @@ export default function Calendar() {
         events={allEvents as EventSourceInput}
         nowIndicator={true}
         // editable={true}
-        // droppable={true}
-        selectable={true}
+        droppable={false}
+        selectable={false}
         selectMirror={true}
         // dateClick={handleDateClick}
         // drop={(data) => addEvent(data)}

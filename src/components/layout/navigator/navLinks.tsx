@@ -3,7 +3,12 @@
 import { Button } from '@/components/ui/button';
 import { createClient } from '@/utils/supabase/client';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import {
+  usePathname,
+  useRouter,
+  useSelectedLayoutSegment,
+} from 'next/navigation';
+import { useEffect } from 'react';
 
 interface NavlinksProps {
   user?: any;
@@ -12,6 +17,10 @@ interface NavlinksProps {
 export default function Navlinks({ user }: NavlinksProps) {
   const router = useRouter();
   const supabase = createClient();
+
+  const pathname = usePathname();
+
+  console.log('dddd  ', pathname);
 
   const handleLogOut = async () => {
     const { error } = await supabase.auth.signOut();
@@ -22,6 +31,10 @@ export default function Navlinks({ user }: NavlinksProps) {
 
     router.replace('/');
   };
+
+  // const isActive = (href: string) => {
+  //   return ttt === href ? 'active' : '';
+  // };
 
   return (
     <div className="relative flex flex-row justify-between py-4 align-center md:py-6">
@@ -38,12 +51,19 @@ export default function Navlinks({ user }: NavlinksProps) {
           <Link
             href="/"
             className="inline-flex items-center leading-6 font-medium transition ease-in-out duration-75 cursor-pointer text-slate-950 rounded-md p-1"
+            style={{
+              textDecorationLine: pathname === '/' ? 'underline' : 'none',
+            }}
           >
             마켓
           </Link>
           <Link
-            href="/"
+            href="/startup"
             className="inline-flex items-center leading-6 font-medium transition ease-in-out duration-75 cursor-pointer text--slate-950 rounded-md p-1"
+            style={{
+              textDecorationLine:
+                pathname === '/startup' ? 'underline' : 'none',
+            }}
           >
             창업
           </Link>
