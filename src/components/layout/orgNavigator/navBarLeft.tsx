@@ -1,9 +1,10 @@
 'use client';
 
+import { AlertLogout } from '@/components/alert/alertLogout';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default function NavBarLeft() {
+export default function NavbarLeft() {
   const pathname = usePathname();
 
   return (
@@ -68,11 +69,8 @@ export default function NavBarLeft() {
         <Link
           href=""
           className="inline-flex items-center leading-6 font-medium transition ease-in-out duration-75 cursor-pointer text--slate-950 rounded-md p-1"
-          onClick={() => {
-            alert('로그아웃 하시겠습니까');
-          }}
         >
-          로그아웃
+          <AlertLogout />
         </Link>
       </nav>
     </div>

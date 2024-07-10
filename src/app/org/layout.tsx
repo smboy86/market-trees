@@ -1,6 +1,6 @@
 import { Container } from '@/components/layout/container';
 import Navbar from '@/components/layout/navigator/navbar';
-import NavBarLeft from '@/components/layout/orgNavigator/navBarLeft';
+import NavbarLeft from '@/components/layout/orgNavigator/navbarLeft';
 import Wrap from '@/components/layout/wrap';
 
 export default function DashboardLayout({
@@ -16,7 +16,7 @@ export default function DashboardLayout({
         <Wrap>
           <div className="flex w-full gap-4 ">
             <div className="left flex flex-col w-[160px]">
-              <NavBarLeft />
+              <NavbarLeft />
             </div>
             <div className="right">{children}</div>
           </div>

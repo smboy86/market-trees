@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import AuthProvider from '@/components/common/AuthProvider';
-import Navbar from '@/components/layout/navigator/navbar';
 import Footer from '@/components/layout/footer';
-import CheckUserSession from '@/components/auth/checkUserSession';
 import { Suspense } from 'react';
 import { Toaster } from '@/components/ui/toaster';
 
@@ -23,13 +20,10 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <body className={inter.className}>
-        {/* 네비게이션 서버 컴포넌트 */}
-        {/* <Navbar /> */}
-        <AuthProvider>
-          {children}
-          {/* 세션 체크 처리 */}
-          <CheckUserSession />
-        </AuthProvider>
+        {/* <AuthProvider> */}
+        {children}
+        {/* 세션 체크 처리 */}
+        {/* </AuthProvider> */}
         <Footer />
         <Suspense>
           <Toaster />

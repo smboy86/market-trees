@@ -1,9 +1,7 @@
-'use client';
-
 import { type ComponentProps } from 'react';
 import { Button } from '@/components/ui/button';
-import { createClient } from '@/utils/supabase/client';
 import { redirect } from 'next/navigation';
+import { createClient } from '@/utils/supabase/server';
 
 type Props = ComponentProps<'button'> & {
   pendingText?: string;
@@ -20,7 +18,7 @@ export function SocialLoginKakao({ children, pendingText, ...props }: Props) {
     // Make sure to include a trailing `/`.
     url = url.endsWith('/') ? url : `${url}/`;
 
-    console.log('URL ::: ', url);
+    console.log('social URL ::: ', url);
     return url;
   };
 

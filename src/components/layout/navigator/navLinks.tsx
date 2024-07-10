@@ -3,12 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { createClient } from '@/utils/supabase/client';
 import Link from 'next/link';
-import {
-  usePathname,
-  useRouter,
-  useSelectedLayoutSegment,
-} from 'next/navigation';
-import { useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface NavlinksProps {
   user?: any;
@@ -19,8 +14,6 @@ export default function Navlinks({ user }: NavlinksProps) {
   const supabase = createClient();
 
   const pathname = usePathname();
-
-  console.log('dddd  ', pathname);
 
   const handleLogOut = async () => {
     const { error } = await supabase.auth.signOut();

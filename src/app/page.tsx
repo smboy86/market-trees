@@ -1,6 +1,7 @@
 import Calendar from '@/components/calrendar/calendar';
 import { Container } from '@/components/layout/container';
 import Navbar from '@/components/layout/navigator/navbar';
+import NavbarClient from '@/components/layout/navigator/navbarClient';
 import Wrap from '@/components/layout/wrap';
 import KakaoMap from '@/components/map/kakaoMap';
 import MainSwiper from '@/components/swiper/mainSwiper';
@@ -9,6 +10,8 @@ export default function App() {
     <>
       {/* 네비게이션 서버 컴포넌트 */}
       <Navbar />
+      {/* 네비게이션 클라이언트 컴포넌트 */}
+      {/* <NavbarClient /> */}
       <Container>
         <Wrap>
           <div className="w-full mb-10">
