@@ -4,9 +4,9 @@ import Wrap from './wrap';
 
 export default function Footer() {
   return (
-    <Container>
-      <Wrap>
-        <footer className="w-full mx-auto px-6 bg-zinc-900">
+    <footer className="w-full flex flex-col items-center bg-zinc-900">
+      <div className="max-w-[1080px] ">
+        <div className="">
           <div className="grid grid-cols-1 gap-8 py-12 text-white transition-colors duration-150 border-b lg:grid-cols-12 border-zinc-600 bg-zinc-900">
             <div className="col-span-3">
               <Link
@@ -110,8 +110,8 @@ export default function Footer() {
           </a>
         </div> */}
           </div>
-        </footer>
-      </Wrap>
-    </Container>
+        </div>
+      </div>
+    </footer>
   );
 }
