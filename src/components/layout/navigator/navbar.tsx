@@ -8,7 +8,7 @@ export default async function Navbar() {
 
   return (
     <nav className="sticky top-0 z-40 bg-white transition-all duration-150 h-16 md:h-20">
-      <div className="max-w-6xl px-6 mx-auto">
+      <div className="max-w-[1080px] mx-auto">
         <Navlinks user={data.user} />
       </div>
     </nav>

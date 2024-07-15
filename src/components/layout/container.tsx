@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 const containerVariants = cva('mx-auto px-8', {
   variants: {
     variant: {
-      pcLayout: 'min-w-7xl px-4 py-4 max-w-[1080px] mt-2 mb-6',
+      pcLayout: 'min-w-7xl max-w-[1080px] px-4 py-4 mt-2 mb-6',
       // fullMobileConstrainedPadded: 'max-w-7xl sm:px-6 lg:px-8',
       // constrainedPadded: 'max-w-7xl px-4 sm:px-6 lg:px-8',
       // fullMobileBreakpointPadded: 'container mx-auto sm:px-6 lg:px-8',
