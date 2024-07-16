@@ -196,74 +196,76 @@ export default function Page({ params }: Props) {
         </div>
       </div>
       {/* 2) 텍스트  */}
-      <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-        <li>
-          <div className="flex">
-            <div className="w-2/12">마켓명</div>
-            <div className="">동탄 레이크꼬모 송동실</div>
-          </div>
-        </li>
-        <li>
-          <div className="flex">
-            <div className="w-2/12">설명</div>
-            <div className="">설명</div>
-          </div>
-        </li>
-        <li>
-          <div className="flex">
-            <div className="w-2/12">주최/주관사</div>
-            <div className="">소녀마켓</div>
-          </div>
-        </li>
-        <li>
-          <div className="flex">
-            <div className="w-2/12">사업자명</div>
-            <div className="">(주)1961 하우스</div>
-          </div>
-        </li>
-        <li>
-          <div className="flex">
-            <div className="w-2/12">사업자번호</div>
-            <div className="">678-**-****</div>
-          </div>
-        </li>
-        <li>
-          <div className="flex">
-            <div className="w-2/12">장소</div>
-            <div className="">동탄 레이크꼬모 송동실</div>
-          </div>
-        </li>
-        <li>
-          <div className="flex">
-            <div className="w-2/12">날짜</div>
-            <div className="">2월16일 ~ 18일 송동길 1F (3일)</div>
-          </div>
-        </li>
-        <li>
-          <div className="flex">
-            <div className="w-2/12">모집기간</div>
-            <div className="">마감시까지</div>
-          </div>
-        </li>
-        <li>
-          <div className="flex">
-            <div className="w-2/12">모집규모</div>
-            <div className="">00팀</div>
-          </div>
-        </li>
-        <li>
-          <div className="flex">
-            <div className="w-2/12">모집조건</div>
-            <div className="">카테고리 문의주세요 (마감체크)</div>
-          </div>
-        </li>
-        <li>
-          <div className="flex">
-            <div className="w-2/12">참가(입점)비용</div>
-            <div className="">1일 1테이블 기준 10만원 (부가세별도) </div>
-          </div>
-        </li>
-      </ul>
+      <div className="border rounded-md mt-4 pl-6">
+        <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+          <li>
+            <div className="flex">
+              <div className="w-2/12">마켓명</div>
+              <div className="">동탄 레이크꼬모 송동실</div>
+            </div>
+          </li>
+          <li>
+            <div className="flex">
+              <div className="w-2/12">설명</div>
+              <div className="">설명</div>
+            </div>
+          </li>
+          <li>
+            <div className="flex">
+              <div className="w-2/12">주최/주관사</div>
+              <div className="">소녀마켓</div>
+            </div>
+          </li>
+          <li>
+            <div className="flex">
+              <div className="w-2/12">사업자명</div>
+              <div className="">(주)1961 하우스</div>
+            </div>
+          </li>
+          <li>
+            <div className="flex">
+              <div className="w-2/12">사업자번호</div>
+              <div className="">678-**-****</div>
+            </div>
+          </li>
+          <li>
+            <div className="flex">
+              <div className="w-2/12">장소</div>
+              <div className="">동탄 레이크꼬모 송동실</div>
+            </div>
+          </li>
+          <li>
+            <div className="flex">
+              <div className="w-2/12">날짜</div>
+              <div className="">2월16일 ~ 18일 송동길 1F (3일)</div>
+            </div>
+          </li>
+          <li>
+            <div className="flex">
+              <div className="w-2/12">모집기간</div>
+              <div className="">마감시까지</div>
+            </div>
+          </li>
+          <li>
+            <div className="flex">
+              <div className="w-2/12">모집규모</div>
+              <div className="">00팀</div>
+            </div>
+          </li>
+          <li>
+            <div className="flex">
+              <div className="w-2/12">모집조건</div>
+              <div className="">카테고리 문의주세요 (마감체크)</div>
+            </div>
+          </li>
+          <li>
+            <div className="flex">
+              <div className="w-2/12">참가(입점)비용</div>
+              <div className="">1일 1테이블 기준 10만원 (부가세별도) </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </>
   );
 }
