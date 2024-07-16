@@ -1,6 +1,5 @@
 import { Container } from '@/components/layout/container';
 import Navbar from '@/components/layout/navigator/navbar';
-import NavbarLeft from '@/components/layout/orgNavigator/navbarLeft';
 import Wrap from '@/components/layout/wrap';
 
 export default function DashboardLayout({
