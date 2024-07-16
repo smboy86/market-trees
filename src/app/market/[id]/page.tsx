@@ -1,6 +1,17 @@
 'use client';
 
 import SelectBox from '@/components/select/SelectBox';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Heart, X } from 'lucide-react';
@@ -27,6 +38,11 @@ export default function Page({ params }: Props) {
   }>();
 
   const handleMovePage = () => {
+    // if (true) {
+    //   AlertMarketJoin();
+    // } else {
+    //   console.log('ddd');
+    // }
     router.push(`/market/join/${params.id}?date=${date}&tableCnt=${tableCnt}`);
   };
 
@@ -115,6 +131,7 @@ export default function Page({ params }: Props) {
                 },
               ]}
             />
+            {/* 선택 리스트 */}
             <div className="border">
               <div className="flex justify-between items-center p-2 bg-slate-200">
                 <div className="">
@@ -132,12 +149,49 @@ export default function Page({ params }: Props) {
                 </div>
               </div>
             </div>
-            <Button className="w-full" onClick={() => handleMovePage()}>
+            {/* 선택 총 합 */}
+            <div className="px-2 py-4 pr-10 text-right bg-slate-500">
+              총 결제금액 150,000원
+            </div>
+            {/* <Button className="w-full" onClick={() => handleMovePage()}>
               참가 신청하기
-            </Button>
+            </Button> */}
             {/* <Button asChild>
               <Link href="/market/join/1">참가 신청하기</Link>
             </Button> */}
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button className="w-full">참가 신청하기</Button>
+              </AlertDialogTrigger>
+              {/* 1)  */}
+              {/* <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>안내</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    참가를 신청하실 날짜와 매대 개수를 선택해주세요.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>확인</AlertDialogCancel>
+                </AlertDialogFooter>
+              </AlertDialogContent> */}
+              {/* 2) */}
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>안내</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    셀러 회원만 참가 신청이 가능합니다. 셀러 회원으로 로그인 후
+                    이용해주세요.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>확인</AlertDialogCancel>
+                  <AlertDialogAction onClick={handleMovePage}>
+                    셀러 회원으로 로그인하기
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
           </div>
         </div>
       </div>
