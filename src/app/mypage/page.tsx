@@ -24,7 +24,6 @@ export default function Page() {
       const { data } = await supabase.auth.getUser();
 
       if (data !== null && data.user !== null) {
-        console.log('fffff ', data.user.user_metadata.avatar_url);
         // setUser(data.user);
         setUser({
           user_metadata: { avatar_url: data.user.user_metadata.avatar_url },
