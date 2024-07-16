@@ -43,7 +43,9 @@ export default function Page({ params }: Props) {
     // } else {
     //   console.log('ddd');
     // }
-    router.push(`/market/join/${params.id}?date=${date}&tableCnt=${tableCnt}`);
+    router.push(
+      `/market/join?id=${params.id}&date=${date}&tableCnt=${tableCnt}`,
+    );
   };
 
   return (
