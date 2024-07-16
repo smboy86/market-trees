@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { Card, CardContent } from '../ui/card';
 import {
   Carousel,
@@ -10,6 +11,12 @@ import {
 } from '../ui/carousel';
 
 export default function MainSwiper() {
+  const router = useRouter();
+
+  const handleMovePage = (id: string) => {
+    router.push(`/market/${id}`);
+  };
+
   return (
     <Carousel className="w-full mt-1">
       <CarouselContent className="-ml-1">
@@ -17,7 +24,7 @@ export default function MainSwiper() {
           <CarouselItem key={index} className="pl-1 basis-1/5">
             <div className="p-1">
               <Card
-                onClick={() => alert(`마켓 ${index + 1}`)}
+                onClick={() => handleMovePage((index + 1).toString())}
                 className="cursor-pointer"
               >
                 <CardContent className="flex aspect-square items-center justify-center p-6">
