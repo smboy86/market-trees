@@ -1,4 +1,5 @@
 'use client';
+import Header from '@/components/layout/Header';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -20,9 +21,7 @@ export default function Page(props: Props) {
 
   return (
     <>
-      <div className="w-full text-center">
-        <h1 className="">마켓 참가 신청하기</h1>
-      </div>
+      <Header title="마켓 참가 신청하기" />
       <div className="w-full flex gap-4 pt-4">
         <div className="left w-1/2 flex flex-col">
           <Skeleton className="w-full h-[280px] rounded-xl flex justify-center items-center">
