@@ -18,7 +18,7 @@ export default function DashboardLayout({
             <div className="left flex flex-col w-[160px]">
               <NavbarLeft />
             </div>
-            <div className="right">{children}</div>
+            <div className="w-full">{children}</div>
           </div>
         </Wrap>
       </Container>

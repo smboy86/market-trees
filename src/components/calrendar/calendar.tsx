@@ -17,6 +17,7 @@ import {
   SelectValue,
 } from '../ui/select';
 import { Button } from '../ui/button';
+import { Checkbox } from '../ui/checkbox';
 
 interface Event {
   title: string;
@@ -25,7 +26,12 @@ interface Event {
   id: number;
 }
 
-export default function Calendar() {
+interface Props {
+  display?: 'main' | 'org';
+}
+
+export default function Calendar(props: Props) {
+  const { display = 'main' } = props;
   const [allEvents, setAllEvents] = useState<Event[]>([]);
 
   //   const [newEvent, setNewEvent] = useState<Event>({
@@ -82,14 +88,35 @@ export default function Calendar() {
             </SelectContent>
           </Select>
         </div>
-        <div className="right flex gap-2">
-          <Button onClick={() => alert('마켓 리뷰 등록 화면으로 이동')}>
-            마켓 리뷰 등록
-          </Button>
-          <Button onClick={() => alert('(주최자)마켓 일정 등록 화면으로 이동')}>
-            마켓 일정 등록
-          </Button>
-        </div>
+        {display === 'main' ? (
+          <div className="right flex gap-2">
+            <Button onClick={() => alert('마켓 리뷰 등록 화면으로 이동')}>
+              마켓 리뷰 등록
+            </Button>
+            <Button
+              onClick={() => alert('(주최자)마켓 일정 등록 화면으로 이동')}
+            >
+              마켓 일정 등록
+            </Button>
+          </div>
+        ) : (
+          <div className="">
+            <div className="flex items-center space-x-2">
+              <Checkbox
+                id="terms"
+                onCheckedChange={(checked) => {
+                  alert(`체크 ${checked ? 'V' : 'X'}`);
+                }}
+              />
+              <label
+                htmlFor="terms"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                진행중인 마켓만 보기
+              </label>
+            </div>
+          </div>
+        )}
       </div>
       <FullCalendar
         locale={'ko'}
