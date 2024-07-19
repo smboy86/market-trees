@@ -88,9 +88,9 @@ export default function MarketManageTabs() {
         </div>
         {/* 2) 리스트 */}
         <ul className="p-1 mt-4 space-y-3">
-          <MargetListItem />
-          <MargetListItem />
-          <MargetListItem />
+          <MargetListItem type="progress" />
+          <MargetListItem type="progress" />
+          <MargetListItem type="progress" />
         </ul>
       </TabsContent>
       <TabsContent value="t2">
@@ -169,8 +169,8 @@ export default function MarketManageTabs() {
         </div>
         {/* 2) 리스트 */}
         <ul className="p-1 mt-4 space-y-3">
-          <MargetListItem />
-          <MargetListItem />
+          <MargetListItem type="end" />
+          <MargetListItem type="end" />
         </ul>
       </TabsContent>
       <TabsContent value="t3">
@@ -249,7 +249,7 @@ export default function MarketManageTabs() {
         </div>
         {/* 2) 리스트 */}
         <ul className="p-1 mt-4 space-y-3">
-          <MargetListItem />
+          <MargetListItem type="cancel" />
         </ul>
       </TabsContent>
     </Tabs>
