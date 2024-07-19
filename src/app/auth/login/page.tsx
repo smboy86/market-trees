@@ -35,7 +35,7 @@ export default function Page() {
               <div className="grid gap-6">
                 <Button variant="outline" formAction={signInWithKakaoServer}>
                   <MessageCircle className="mr-2 h-4 w-4" />
-                  카카오톡
+                  카카오톡 22
                 </Button>
               </div>
               <div className="relative">
@@ -54,13 +54,12 @@ export default function Page() {
                   id="email"
                   name="email"
                   type="email"
-                  required
                   placeholder="m@example.com"
                 />
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="password">Password</Label>
-                <Input id="password" name="password" type="password" required />
+                <Input id="password" name="password" type="password" />
               </div>
             </CardContent>
             <CardFooter>

@@ -1,7 +1,9 @@
 import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { cn } from '@/lib/utils';
 import { Send, Users } from 'lucide-react';
+import CancelDialog from './DialogCancel';
+import DialogRecruit from './DialogRecruit';
+import DialogModify from './DialogModify';
 
 interface Props {
   type: 'progress' | 'end' | 'cancel';
@@ -32,9 +34,9 @@ export default function MargetListItem(props: Props) {
       </div>
       {props.type === 'progress' && (
         <div className="flex space-x-4 pt-4">
-          <Button>모집관리</Button>
-          <Button variant={'secondary'}>정보변경</Button>
-          <Button variant={'outline'}>취소</Button>
+          <DialogRecruit />
+          <DialogModify />
+          <CancelDialog />
         </div>
       )}
     </li>

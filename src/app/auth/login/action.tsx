@@ -60,6 +60,7 @@ const getURL = () => {
 };
 
 export async function signInWithKakaoServer() {
+  console.log('33333 ');
   const supabase = createClient();
 
   const { data, error } = await supabase.auth.signInWithOAuth({
