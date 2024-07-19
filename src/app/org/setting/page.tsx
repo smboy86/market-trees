@@ -1,3 +1,9 @@
+import Header from '@/components/layout/Header';
+
 export default function Page() {
-  return <div className="">정보 관리</div>;
+  return (
+    <>
+      <Header title="정보 관리" />
+    </>
+  );
 }

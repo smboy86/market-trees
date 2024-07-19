@@ -15,7 +15,7 @@ export default function MargetListItem(props: Props) {
         props.type === 'cancel' && 'line-through',
       )}
     >
-      <div className="">마켓명</div>
+      <div className="">$마켓명$</div>
       <div className="">
         2024. 05. 07 (화) ~ 05. 08 (수) 10:00 ~ 18:00 (2일)
       </div>
